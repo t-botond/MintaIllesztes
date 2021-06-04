@@ -3,7 +3,6 @@ Először a program bekéri a megadott szöveget (pl. AAABBDCCCAA), majd új sor
 Ekkor a program meg fogja jeleníteni az algoritmus lépéseti kb így:
 
 
-
 Ugrás értéke: 6
 AAABBDCCCAA
 AABAC
