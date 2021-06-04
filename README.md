@@ -1,6 +1,7 @@
-# MintaIllesztes
+# MintaIllesztes#
 Először a program bekéri a megadott szöveget (pl. AAABBDCCCAA), majd új sorban add meg a mintát (pl. AABAC).
 Ekkor a program meg fogja jeleníteni az algoritmus lépéseti kb így:
+
 
 ===========================
 Ugrás értéke: 6
