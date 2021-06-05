@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
@@ -12,6 +14,22 @@ public class Main {
         System.out.println("Add meg a mintát!");
         minta = s.nextLine();
         s.close();
+        System.out.println("===========================");
+        System.out.println("Ugrófüggvény");
+        ArrayList<String> mintaC= new ArrayList<>();
+        for(int j=0;j< minta.length();++j){
+            if(mintaC.indexOf(minta.charAt(j)+"")==-1)
+                mintaC.add(minta.charAt(j)+"");
+        }
+        Collections.sort(mintaC);
+        ArrayList<Integer> mintaU=new ArrayList<>();
+        for(int j=0;j< mintaC.size();++j){
+            mintaU.add(ugro(mintaC.get(j).charAt(0)));
+        }
+        for(int j=0;j< mintaC.size();++j) {
+            System.out.println("U["+mintaC.get(j)+"] = "+mintaU.get(j));
+        }
+
         boolean illeszkedi = false;
         System.out.println("===========================");
         int ugrasok_szama=0;
@@ -51,6 +69,12 @@ public class Main {
             for (int j = minta.length() - 1; j >= 0; --j) {
                 if (minta.charAt(j) == text.charAt(minta.length()+i)) return minta.length() - j;
             }
+        }
+        return minta.length()+1;
+    }
+    public static int ugro(char c){
+        for (int j = minta.length() - 1; j >= 0; --j) {
+            if (minta.charAt(j) == c) return minta.length() - j;
         }
         return minta.length()+1;
     }
